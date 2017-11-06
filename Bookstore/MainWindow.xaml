@@ -1,0 +1,31 @@
+﻿<Window x:Class="Bookstore.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bookstore"
+        mc:Ignorable="d"
+        Title="Book Store" Height="566" Width="910" Loaded="Window_Loaded">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="381" Margin="10,74,0,0" VerticalAlignment="Top" Width="872">
+            <TabItem Header="Library">
+                <DataGrid x:Name="dgrLibrary" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="284" VerticalAlignment="Top" Width="834" Margin="10,83,0,0"/>
+
+
+            </TabItem>
+            <TabItem Header="Cart" HorizontalAlignment="Left" Width="40">
+                <DataGrid x:Name="dgrCart" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="381" VerticalAlignment="Top" Width="834" Margin="10,5,0,0"/>
+            </TabItem>
+
+
+
+
+        </TabControl>
+        <Button x:Name="btnAddToCart" Content="Add to Cart" HorizontalAlignment="Left" Margin="557,483,0,0" VerticalAlignment="Top" Width="75" Click="btnAddToCart_Click"/>
+        <Button x:Name="btnPlaceOrder" Content="Place order" HorizontalAlignment="Left" Margin="711,483,0,0" VerticalAlignment="Top" Width="75" Click="btnPlaceOrder_Click"/>
+        <TextBox x:Name="txtTitle" HorizontalAlignment="Left" Height="23" Margin="206,23,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnFilter" Content="Filter" HorizontalAlignment="Left" Margin="339,23,0,0" VerticalAlignment="Top" Width="75" Click="btnFilter_Click"/>
+        <Label Content="Title / Author" HorizontalAlignment="Left" Margin="87,21,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
